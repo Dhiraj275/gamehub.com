@@ -4,6 +4,29 @@
   box-sizing: border-box;
 }
 
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+html::-webkit-scrollbar-track {
+  display: none;
+  width: 4px;
+}
+
+/* Handle */
+html::-webkit-scrollbar-thumb {
+  background-color: #2a2a2a;
+  border-radius: 20px;
+  transition: 0.5s;
+  width: 4px;
+}
+
+/* Handle on hover */
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #6d6d6d;
+}
+
 :root {
   --paddingFromSide: 120px
 }
@@ -203,9 +226,214 @@ main {
 .product-row {
   color: #f5f5f5;
 }
-.product-row h4{
+
+.product-row h4 {
   font-weight: normal;
 }
+
+.card-wrap {
+  margin: 20px 0;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.product-row i {
+  color: #6d6d6d;
+  margin-left: 3px;
+  font-size: 12px;
+}
+
+/* width */
+.card-wrap::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.card-wrap::-webkit-scrollbar-track {
+  display: none;
+}
+
+/* Handle */
+.card-wrap::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+/* Handle on hover */
+.card-wrap::-webkit-scrollbar-thumb:hover {
+  display: none;
+}
+
+.game-card {
+  min-width: 180px;
+  margin: 0 20px 0 0;
+  scroll-snap-align: start;
+}
+
+.game-card .img-div {
+  width: 100%;
+}
+
+.game-card .img-div img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+
+
+.game-card .type {
+  color: #f5f5f599;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+.game-card h5 {
+  font-size: 14px;
+  margin: 10px 0;
+  font-weight: 400;
+}
+
+.game-card .price-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game-card .discount,
+.game-card-h .discount {
+  background-color: #0074d4;
+  font-size: 12px;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.game-card .actule-price {
+  text-align: right;
+}
+
+.game-card .price-mrp {
+  color: #6d6d6d;
+  margin-bottom: 8px;
+}
+
+.game-card .price-mrp del {
+  color: #6d6d6d;
+}
+
+.game-banners {
+  display: flex;
+}
+
+.banner-card {
+  width: 500px;
+  padding: 10px 20px;
+}
+
+.banner-card .detail {
+  padding: 10px;
+}
+
+.banner-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.banner-card h3 {
+  color: #f5f5f5;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.banner-card p {
+  color: #f5f5f599;
+}
+
+.game-columns-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.game-column {
+  max-width: 30%;
+}
+
+.game-column .head {
+  display: flex;
+  color: #f5f5f5;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+.game-column .head h5 {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+button.view-more {
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #f5f5f5;
+  border: 1px solid #f5f5f599;
+  text-transform: uppercase;
+  font-size: 8px;
+  border-radius: 4px;
+}
+
+.game-card-h {
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.game-card-h:hover {
+  background: #2a2a2a;
+}
+
+.game-card-h img {
+  width: 30%;
+  border-radius: 5px;
+}
+
+.game-card-h .detail {
+  padding: 10px;
+  width: 70%;
+}
+
+.game-card-h .name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  width: 100%;
+}
+
+.game-card-h .price {
+  display: flex;
+  margin: 10px 0;
+  align-items: center;
+}
+
+.game-card-h .mrp {
+  font-size: 12px;
+  margin-right: 10px;
+  color: #f5f5f599;
+}
+
+.game-card-h .main-price {
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.game-card-h .discount {
+  font-size: 10px;
+  margin-right: 10px;
+}
+
 @keyframes progress {
   from {
     width: 0%;

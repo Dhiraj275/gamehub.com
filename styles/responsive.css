@@ -96,6 +96,22 @@
         width: 100%;
         border-radius: 20px;
     }
+    .game-banners{
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+    }
+    .banner-card{
+        min-width: 100%;
+        scroll-snap-align: start;
+    }
+    .game-columns-wrap{
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+    }
+    .game-column{
+        min-width: 100%;
+        scroll-snap-align: start;
+    }
 }
 
 @media (min-width:1200px) {
