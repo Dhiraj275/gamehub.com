@@ -1,3 +1,7 @@
+#game-page {
+    padding-top: 100px;
+}
+
 .game-title {
     color: #f5f5f5;
 }
@@ -50,8 +54,43 @@
     width: 70%;
 }
 
-.slider {
+.first-section {
+    display: flex;
+}
+
+.buying-section {
+    position: relative;
+    color: #f5f5f5;
+}
+
+.buying-section .section {
+    position: fixed;
+    width: calc(30% - var(--paddingFromSide)/2);
+    padding-left: 50px;
+}
+
+.buying-section .logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.buying-section img {
+    width: 70%;
+}
+
+.buying-section button, #cart button {
+    padding: 15px 50px;
+    border: none;
+    color: #f5f5f5;
+    border-radius: 4px;
     width: 100%;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin: 10px 0;
+}
+.slider {
+    width: 70%;
     display: flex;
     overflow: scroll;
     scroll-snap-type: x mandatory;
@@ -128,14 +167,14 @@
     margin-bottom: 10px;
 }
 
-.gamehub-rattings .section-head {}
+.section-head {}
 
-.gamehub-rattings .section-head h4 {
+.section-head h4 {
     font-size: 16px;
     font-weight: 100;
 }
 
-.gamehub-rattings .section-head p {
+.section-head p {
     font-size: 12px;
     font-weight: 100;
     color: #f5f5f599;
@@ -149,7 +188,7 @@
     margin: 40px 0;
 }
 
-.gamehub-rattings .ratting .int{
+.gamehub-rattings .ratting .int {
     margin-right: 10px;
     font-size: 40px;
 }
@@ -190,4 +229,40 @@
 
 .ux-grid .item h4 img {
     width: 64px;
+}
+
+.specifications {
+    margin-top: 30px;
+}
+
+.specifications .box {
+    background-color: #202020;
+    padding: 30px 20px;
+}
+
+.specifications .box {
+    display: flex;
+    margin-top: 20px;
+}
+
+.specifications .title {
+    color: #f5f5f599;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.specifications .item {
+    min-height: 80px;
+    line-height: 25px;
+}
+
+.specifications .type {
+    color: #f5f5f599;
+    font-size: 14px;
+}
+
+.specifications .min,
+.specifications .rec {
+    width: 50%;
+    width: 50%;
 }

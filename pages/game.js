@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import React from 'react'
+import Footer from '../Components/Common/Footer'
 import NavBar from '../Components/Common/NavBar'
 import { sliderImages } from '../Components/gameArry'
-
 function game() {
     return (
         <>
@@ -11,17 +11,17 @@ function game() {
             </Head>
             <body>
                 <NavBar />
-                <main>
+                <main id="game-page">
                     <div className="game-title">
                         <h1>Marvel&#39;s Spider-Man: Miles Morales</h1>
                         <div className="flex wrap">
                             <div className="ratings">
                                 <div className="stars">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
+                                    <i className="fa-solid fa-star"></i>
+                                    <i className="fa-solid fa-star"></i>
+                                    <i className="fa-solid fa-star"></i>
+                                    <i className="fa-solid fa-star"></i>
+                                    <i className="fa-regular fa-star"></i>
                                 </div>
                                 <div className="intiger">
                                     4.0
@@ -39,7 +39,8 @@ function game() {
                         </div>
                     </div>
                     <div className="main-warp">
-                        <div className="game-description">
+
+                        <div className="first-section">
                             <div className="slider">
                                 {
                                     sliderImages.map((item, index) => {
@@ -49,6 +50,27 @@ function game() {
                                     })
                                 }
                             </div>
+                            <div className="buying-section">
+                                <div className="section">
+                                    <div className="logo">
+                                        <img src="/Assets/features/feature_1_indi.jpg" alt="" />
+                                    </div>
+                                    <div className='right'>
+                                        <div className="price-wrap">
+                                            <div className="discount">-25%</div>
+                                            <div className="actule-price">
+                                                <p className="price-mrp"><del>₹3,999</del></p>
+                                                <p className="price-sell"> ₹2,999.25</p>
+                                            </div>
+                                        </div>
+                                        <button className='blue filled'>Buy Now</button>
+                                        <button className='white outlined'>Buy Now</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div className="game-description">
                             <div className="brief-desc">
                                 <h5>
                                     Teenage Miles Morales is adjusting to his new home while following in the footsteps of his mentor, Peter Parker, as a new Spider-Man. When a fierce power struggle threatens to destroy his home, Miles must take up the mantle of Spider-Man and own it.
@@ -83,11 +105,11 @@ function game() {
                                         4.0
                                     </div>
                                     <div className="star">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
+                                        <i className="fa-solid fa-star"></i>
+                                        <i className="fa-solid fa-star"></i>
+                                        <i className="fa-solid fa-star"></i>
+                                        <i className="fa-solid fa-star"></i>
+                                        <i className="fa-regular fa-star"></i>
                                     </div>
                                 </div>
                                 <div className="ux-grid">
@@ -147,11 +169,78 @@ function game() {
                                     </div>
                                 </div>
                             </div>
+                            <div className="specifications">
+                                <div className="section-head">
+                                    <h4>Specifications</h4>
+                                </div>
+                                <div className="box">
+                                    <div className="min">
+                                        <div className="title">
+                                            Minimum
+                                        </div>
+                                        <div className="item">
+                                            <div className='type'>OS</div>
+                                            <div className="spec">Windows 7 64-bit or
+                                                newer
+                                            </div>
+                                        </div>
+                                        <div className="item">
+                                            <div className='type'>Processor</div>
+                                            <div className="spec">Core 2 Duo 2.4 GHz or
+                                                Athlon X2 2.7 GHz
+                                            </div>
+                                        </div>
+                                        <div className="item">
+                                            <div className="type">Memory</div>
+                                            <div className="spec"> 4 GB</div>
+                                        </div>
+                                        <div className="item">
+                                            <div className="type">Storage</div>
+                                            <div className="spec"> 30 GB</div>
+                                        </div>
+                                        <div className="item">
+                                            <div className="type">Graphics</div>
+                                            <div className="spec"> Nvidia GeForce 8800 GT</div>
+                                        </div>
+                                    </div>
+                                    <div className="rec">
+                                        <div className="title">
+                                            Recommended
+                                        </div>
+                                        <div className="item">
+                                            <div className='type'>OS</div>
+                                            <div className="spec">Windows 8/10 64-bit (latest
+                                                Service Pack)
+                                            </div>
+                                        </div>
+                                        <div className="item">
+                                            <div className='type'>Processor</div>
+                                            <div className="spec">Intel Core i5-750,
+                                                2.67 GHz / AMD Phenom II X4 965, 3.4 GHz
+                                            </div>
+                                        </div>
+                                        <div className="item">
+                                            <div className="type">Memory</div>
+                                            <div className="spec"> 6 GB</div>
+                                        </div>
+                                        <div className="item">
+                                            <div className="type">Storage</div>
+                                            <div className="spec"> 30 GB</div>
+                                        </div>
+                                        <div className="item">
+                                            <div className="type">Graphics</div>
+                                            <div className="spec"> Nvidia GeForce GTX 660
+                                                or ATI Radeon HD 7950</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                    </div>
-                </main>
-            </body>
+                    </div >
+                </main >
+                <Footer />
+            </body >
         </>
     )
 }

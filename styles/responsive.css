@@ -23,6 +23,8 @@
 
     .nav-bar .navi-links li a {
         font-size: 18px;
+        padding: 0;
+        margin: 0 10px;
     }
 
     .nav-bar .navi-links li {
@@ -30,7 +32,9 @@
         font-size: 18px;
 
     }
-
+    #discover{
+        padding-top: 50px;
+    }
     #feature {
         display: none;
     }
@@ -40,6 +44,7 @@
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
         padding-top: 60px;
+        scroll-behavior: smooth;
     }
 
     .feature-item {
@@ -114,10 +119,109 @@
     }
 
     .game-column {
-        min-width: 100%;
-        scroll-snap-align: start;
+        min-width: 90%;
+        scroll-snap-align: center;
     }
-    
+
+    #game-page {
+        padding-top: 80px;
+    }
+    .game-title h1{
+        font-size: 20px;
+    }
+    .game-title .hightlights{
+        display: none;
+    }
+    .first-section {
+        flex-direction: column;
+    }
+
+    .buying-section .section {
+        position: relative;
+        width: 100%;
+        display: flex;
+        padding: 10px;
+    }
+
+    .buying-section .logo {
+        width: 40%;
+    }
+
+    .buying-section .section img {
+        aspect-ratio: 4/3;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .buying-section .section button {
+        padding: 15px 0;
+    }
+    .buying-section .section .right{
+        width: 60%;
+        padding: 10px 20px;
+    }
+    .slider {
+        width: 100%;
+    }
+    .game-description{
+        width: 100%;
+    }
+    .brief-desc h5{
+        font-size: 14px;
+    }
+    .ux-grid .item{
+        min-width: 45%;
+        max-width: 45%;
+    }
+    .ux-grid .item h6{
+        display: none;
+    }
+    .ux-grid .item h4{
+        font-size: 14px;
+    }
+    .specifications .type{
+        font-size: 12px;
+    }
+    .specifications .item{
+        font-size: 12px;
+    }
+    .card-wrap.wrap{
+        justify-content: space-evenly;
+    }
+    .game-card{
+        min-width: 170px;
+        max-width: 170px;
+        padding: 20px;
+    }
+    .card-wrap.wrap a{
+        min-width: 170px;
+        max-width: 170px;
+    }
+    .price-wrap .price-mrp del{
+        font-size: 11px;
+    }
+    .game-card .price-sell{
+        font-size: 12px;
+    }
+    .main-cart{
+        flex-direction: column;
+    }
+    .cart-item .img-box{
+        width: 60%;
+    }
+    #cart .game-card{
+        padding: 10px 0;
+    }
+    .main-cart .left{
+        width: 100%;
+    }
+    .cart-item h4{
+        font-size: 18px;
+    }
+    #cart .right{
+        width: 100%;
+        padding: 20px;
+    }
 }
 
 @media (min-width:1200px) {

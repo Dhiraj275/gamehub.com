@@ -6,7 +6,9 @@ import NavBar from '../Components/Common/NavBar'
 import gameArry from '../Components/gameArry'
 import Features from '../Components/Homepage/Features'
 import GameBanners from '../Components/Homepage/GameBanners'
-
+import Footer from "../Components/Common/Footer"
+import slugify from '../Components/Common/makeSlug'
+import Link from 'next/link'
 export default function Home() {
   return (
     <>
@@ -14,27 +16,30 @@ export default function Home() {
         <title>GameHub</title>
       </Head>
 
-      <body>
-        <NavBar />
-        <Features />
-        <main>
-          <CardRow title={"Holiday Sale Spotlight"} list={gameArry.slice(0, 7)} />
-          <GameBanners />
-          <div className="game-columns-wrap">
-            <div className="game-column">
-              <div className="head">
-                <h5>
-                  Top Sellers
-                </h5>
+
+      <NavBar />
+      <Features />
+      <main>
+        <CardRow title={"Holiday Sale Spotlight"} list={gameArry.slice(0, 7)} />
+        <GameBanners />
+        <div className="game-columns-wrap">
+          <div className="game-column">
+            <div className="head">
+              <h5>
+                Top Sellers
+              </h5>
+              <Link href={"/discover"}>
                 <button className='view-more'>
                   View More
                 </button>
-              </div>
-              {
-                gameArry.slice(8, 13).map((item, index) => {
-                  return (
-                    <div className="game-card-h" key={index}>
-                      <img loading='lazy' src={item.imgSrc} alt="" />
+              </Link>
+            </div>
+            {
+              gameArry.slice(8, 13).map((item, index) => {
+                return (
+                  <Link href={`/game/${slugify(item.gameName)}/${gameArry.indexOf(item)}`} key={index}>
+                    <div className="game-card-h" >
+                      <img loading="lazy" src={item.imgSrc} alt="" />
                       <div className="detail">
                         <div className="name">{item.gameName}</div>
                         <div className="price">
@@ -44,70 +49,77 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-                  )
-                })
-              }
-            </div>
-            <div className="game-column">
-              <div className="head">
-                <h5>
-                  Top Player Rated
-                </h5>
-                <button className='view-more'>
-                  View More
-                </button>
-              </div>
-              {
-                gameArry.slice(14, 19).map((item, index) => {
-                  return (
-                    <div className="game-card-h" key={index}>
-                      <img src={item.imgSrc} alt="" />
-                      <div className="detail">
-                        <div className="name">{item.gameName}</div>
-                        <div className="price">
-                          <div className="discount">{item.gameDiscount}</div>
-                          <div ><del className="mrp">{item.gameMRP}</del></div>
-                          <div className="main-price">{item.gamePrice}</div>
-                        </div>
-                      </div>
-                    </div>
-                  )
-                })
-              }
-            </div>
-            <div className="game-column">
-              <div className="head">
-                <h5>
-                  Best On Store
-                </h5>
-                <button className='view-more'>
-                  View More
-                </button>
-              </div>
-              {
-                gameArry.slice(19, 24).map((item, index) => {
-                  return (
-                    <div className="game-card-h" key={index}>
-                      <img src={item.imgSrc} alt="" />
-                      <div className="detail">
-                        <div className="name">{item.gameName}</div>
-                        <div className="price">
-                          <div className="discount">{item.gameDiscount}</div>
-                          <div ><del className="mrp">{item.gameMRP}</del></div>
-                          <div className="main-price">{item.gamePrice}</div>
-                        </div>
-                      </div>
-                    </div>
-                  )
-                })
-              }
-            </div>
+                  </Link>
+                )
+              })
+            }
           </div>
-        </main>
-        <footer>
-          © 2023, Gamehub, Inc. All rights reserved by Cover All Web Solutions. Non-US transactions through Gamehub International.
-        </footer>
-      </body>
+          <div className="game-column">
+            <div className="head">
+              <h5>
+                Top Player Rated
+              </h5>
+              <Link href={"/discover"}>
+                <button className='view-more'>
+                  View More
+                </button>
+              </Link>
+            </div>
+            {
+              gameArry.slice(14, 19).map((item, index) => {
+                return (
+                  <Link href={`/game/${slugify(item.gameName)}/${gameArry.indexOf(item)}`} key={index}>
+                    <div className="game-card-h" >
+                      <img loading="lazy" src={item.imgSrc} alt="" />
+                      <div className="detail">
+                        <div className="name">{item.gameName}</div>
+                        <div className="price">
+                          <div className="discount">{item.gameDiscount}</div>
+                          <div ><del className="mrp">{item.gameMRP}</del></div>
+                          <div className="main-price">{item.gamePrice}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+
+                )
+              })
+            }
+          </div>
+          <div className="game-column">
+            <div className="head">
+              <h5>
+                Best On Store
+              </h5>
+              <Link href={"/discover"}>
+                <button className='view-more'>
+                  View More
+                </button>
+              </Link>
+            </div>
+            {
+              gameArry.slice(19, 24).map((item, index) => {
+                return (
+                  <Link href={`/game/${slugify(item.gameName)}/${gameArry.indexOf(item)}`} key={index}>
+                    <div className="game-card-h" >
+                      <img loading="lazy" src={item.imgSrc} alt="" />
+                      <div className="detail">
+                        <div className="name">{item.gameName}</div>
+                        <div className="price">
+                          <div className="discount">{item.gameDiscount}</div>
+                          <div ><del className="mrp">{item.gameMRP}</del></div>
+                          <div className="main-price">{item.gamePrice}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                )
+              })
+            }
+          </div>
+        </div>
+      </main>
+      <Footer />
 
 
     </>

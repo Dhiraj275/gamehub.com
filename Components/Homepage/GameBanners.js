@@ -5,7 +5,7 @@ function GameBanners() {
         <div className="game-banners">
             <div className="banner-card">
                 <div className="img-div">
-                    <img src="/assets/cards/free_3.jpg" alt="" />
+                    <img loading="lazy" src="/assets/cards/free_3.jpg" alt="" />
                 </div>
                 <div className="detail">
                     <h3>
@@ -21,7 +21,7 @@ function GameBanners() {
             </div>
             <div className="banner-card">
                 <div className="img-div">
-                    <img src="/assets/cards/free_2.jpg" alt="" />
+                    <img loading="lazy" src="/assets/cards/free_2.jpg" alt="" />
                 </div>
                 <div className="detail">
                     <h3>
@@ -37,7 +37,7 @@ function GameBanners() {
             </div>
             <div className="banner-card">
                 <div className="img-div">
-                    <img src="/assets/cards/free_1.jpg" alt="" />
+                    <img loading="lazy" src="/assets/cards/free_1.jpg" alt="" />
                 </div>
                 <div className="detail">
                     <h3>
