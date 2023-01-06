@@ -34,7 +34,7 @@ export default function Home() {
                 gameArry.slice(8, 13).map((item, index) => {
                   return (
                     <div className="game-card-h" key={index}>
-                      <img src={item.imgSrc} alt="" />
+                      <img loading='lazy' src={item.imgSrc} alt="" />
                       <div className="detail">
                         <div className="name">{item.gameName}</div>
                         <div className="price">
@@ -104,6 +104,9 @@ export default function Home() {
             </div>
           </div>
         </main>
+        <footer>
+          © 2023, Gamehub, Inc. All rights reserved by Cover All Web Solutions. Non-US transactions through Gamehub International.
+        </footer>
       </body>
 
 

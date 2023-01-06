@@ -8,6 +8,11 @@ html::-webkit-scrollbar {
   width: 10px;
 }
 
+.flex {
+  display: flex;
+  align-items: center;
+}
+
 /* Track */
 html::-webkit-scrollbar-track {
   display: none;
@@ -46,6 +51,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
 }
 
 .nav-bar>.left,
@@ -116,6 +124,7 @@ main {
 #feature {
   display: flex;
   padding: 20px var(--paddingFromSide);
+  padding-top: 100px;
 
 }
 
@@ -129,6 +138,7 @@ main {
 
 #feature .main-display img {
   width: 100%;
+  aspect-ratio: 16/9;
   margin-bottom: 10px;
 }
 
@@ -277,6 +287,7 @@ main {
 .game-card .img-div img {
   width: 100%;
   border-radius: 4px;
+  aspect-ratio: 3/4;
 }
 
 
@@ -432,6 +443,13 @@ button.view-more {
 .game-card-h .discount {
   font-size: 10px;
   margin-right: 10px;
+}
+
+footer {
+  background-color: #0074d4;
+  color: #f5f5f5;
+  text-align: center;
+  padding: 20px;
 }
 
 @keyframes progress {

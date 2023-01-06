@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import '../styles/globals.css'
 import '../styles/responsive.css'
+import '../styles/game-page.css'
 function MyApp({ Component, pageProps }) {
   const [showChild, setShowChild] = useState(false)
 

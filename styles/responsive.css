@@ -39,6 +39,7 @@
         display: flex;
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
+        padding-top: 60px;
     }
 
     .feature-item {
@@ -96,31 +97,39 @@
         width: 100%;
         border-radius: 20px;
     }
-    .game-banners{
+
+    .game-banners {
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
     }
-    .banner-card{
+
+    .banner-card {
         min-width: 100%;
         scroll-snap-align: start;
     }
-    .game-columns-wrap{
+
+    .game-columns-wrap {
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
     }
-    .game-column{
+
+    .game-column {
         min-width: 100%;
         scroll-snap-align: start;
     }
+    
 }
 
 @media (min-width:1200px) {
     :root {
         --paddingFromSide: 200px
     }
-    #feature{
+
+    #feature {
         padding: 0 var(--paddingFromSide);
+        padding-top: 100px;
     }
+
     #feature .progress-bar {
         font-size: 12px;
     }

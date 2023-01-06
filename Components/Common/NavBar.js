@@ -6,7 +6,7 @@ function NavBar() {
             <div className="nav-bar desktop">
                 <div className="left">
                     <div className="logo">
-                        <img src="Assets/logo.png" alt="img" />
+                        <img src="/Assets/logo.png" alt="img" />
                     </div>
                     <div className="search-box">
                         <div className="input-box">
