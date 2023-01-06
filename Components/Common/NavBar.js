@@ -42,7 +42,7 @@ function NavBar() {
                     <div className="navi-links">
                         <ul>
                             <li><Link href="/search"><i className="fa-solid fa-magnifying-glass"></i></Link></li>
-                            <li><a href="#"><i className="fa-solid fa-cart-shopping"></i></a></li>
+                            <li><Link href="/cart"><i className="fa-solid fa-cart-shopping"></i></Link></li>
                         </ul>
                     </div>
 

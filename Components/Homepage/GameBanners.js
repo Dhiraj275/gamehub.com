@@ -14,9 +14,6 @@ function GameBanners() {
                     <p>
                         Titanium White Octane. Not available in the Item Shop... until now!
                     </p>
-                    <div className="f2p">
-                        PLay For Free
-                    </div>
                 </div>
             </div>
             <div className="banner-card">
@@ -30,9 +27,6 @@ function GameBanners() {
                     <p>
                         Pick up Mirabel, Luisa and that one we don&apos;t talk about in the Fall Guys Store.
                     </p>
-                    <div className="f2p">
-                        PLay For Free
-                    </div>
                 </div>
             </div>
             <div className="banner-card">
@@ -46,9 +40,6 @@ function GameBanners() {
                     <p>
                         Basketball star Giannis Antetokounmpo slams his way into the Fortnite Icon Series!
                     </p>
-                    <div className="f2p">
-                        PLay For Free
-                    </div>
                 </div>
             </div>
         </div>
