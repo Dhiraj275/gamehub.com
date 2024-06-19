@@ -8,7 +8,7 @@ function NavBar() {
                 <div className="left">
                     <Link href={"/"}>
                         <div className="logo">
-                            <img src="/Assets/logo.png" alt="img" />
+                            <img src="/Assets/logo-x.png" alt="img" />
                         </div>
                     </Link>
                     <Link href="/search">
